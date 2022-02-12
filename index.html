@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app.css">
+    <title>Phook Book App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="lock_show_pin">
+        <button class="clear_data" disabled>Clear Data</button><button class="show_pin" disabled>Show Pin</button><span
+            class="reveal_pin"></span>
+    </div>
+
+    <p class="create_account_msg">Please create a PIN to use the APP! <br> Redirecting....<span
+            class="counting_down"></span></p>
+
+    <p class="chosePinMsg">PIN must be (4) numbers</p>
+
+    <div class="parent_container">
+        <!-- KEY PAD -->
+        <div class="keypad_parent">
+            <div class="show_input"></div>
+            <div class="keypads">
+                <div class="keys_0_9">
+                    <div class="nkey s">1</div>
+                    <div class="nkey s">2</div>
+                    <div class="nkey s">3</div>
+                    <div class="nkey s">4</div>
+                    <div class="nkey s">5</div>
+                    <div class="nkey s">6</div>
+                    <div class="nkey s">7</div>
+                    <div class="nkey s">8</div>
+                    <div class="nkey s">9</div>
+                    <div class="nkey s zero">0</div>
+                </div>
+                <div class="clear">clear</div>
+            </div>
+            <!-- <div class="zero_btn s">0</div> -->
+            <button class="save_pin"><i class="fas fa-arrow-right"></i></button>
+
+            <div class="lock">
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- CREATE CONTACT AND STORE CONTACT -->
+    <div class="view_container">
+        <button class="view_contact">View Contact</button>
+    </div>
+
+    <div class="parent_store_ct">
+        <div class="store_view_contact_container">
+            <div class="create">
+                <div class="store_btn">Create <br> Contact</div>
+                <div class="name_number">
+                    <input type="text" id="name" autocomplete="off" placeholder="Name"> <br>
+                    <input type="number" id="number" autocomplete="off" min="0" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="save_contact"><i class="fas fa-check"></i>
+            </div>
+        </div>
+        <!-- DIsPLAY CONTACT AS SAVED -->
+        <div class="display_contact_inview">
+            <div class="saveBTN"><i class="far fa-save"></i></div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <p class="countDisplay"></p>
+    <section class="all_contact_show"></section>
+    <footer class="claim">
+        App created by: Sunday Olorundipe <br>
+        Do not claim it as your own! <br>
+        get in touch: @omobabaeleero / ssedipe@gmail.com
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
