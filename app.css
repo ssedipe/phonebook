@@ -91,6 +91,8 @@ html{
     padding-left: 3px;
     background-color: burlywood;
     cursor: pointer;
+    display: flex;
+    gap: 5px;
 }
 
 .style_box:hover{
@@ -281,8 +283,8 @@ html{
 
 /* VIEW CONTACT */
 .view_contact{
-    padding: 30px 20px;
-    border-radius: 40px 70px;
+    padding: 10px 10px;
+    border-radius: 20px 30px;
     border: none;
     box-shadow: 2px 1px 4px 1px crimson;
     cursor: pointer;
@@ -468,15 +470,16 @@ html{
 }
 
 footer{
-    border: 2px solid;
     width: fit-content;
-    margin-top: 5px;
-    background-color: black;
+    background-color: purple;
     color: white;
     padding: 3px 10px;
     font-size: 16px;
     visibility: visible;
     text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 4px auto;
 }
 
 .orignalSaveToDriveBtn{

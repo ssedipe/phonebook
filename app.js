@@ -17,13 +17,14 @@ const lock_show_pin = document.querySelector('.lock_show_pin')
 
 let msgCounter = 0
 let divCounter = 0
+let timing;
 
 // KEYPAD
 const keypadParent = document.querySelector('.keys_0_9')
 const clear = document.querySelector('.clear')
 let show_input = document.querySelector('.show_input')
 const pin_number_len = 4
-let countDown = 150000
+let countDown = 20
 
 let finalResult_for_keypad;
 
@@ -90,7 +91,7 @@ window.addEventListener('load', function () {
 
         save_pin.addEventListener('click', function () {
             onlySavePin()
-            countDown = 150000
+            countDown = 20
             getPinFromLocalStrg(show_input)
             try {
                 finalResult_for_keypad.splice(0)
@@ -103,9 +104,9 @@ window.addEventListener('load', function () {
 
 function timingFunc(ele) {
 
-    const timing = setInterval(function () {
+    timing = setInterval(function () {
         form_container.addEventListener('mousemove', function () {
-            countDown = 150000
+            countDown = 20
             ele.innerHTML = `Loggin Out In:<span style="font-size:20px; background:red;">${countDown}</span>`
         })
 
@@ -387,6 +388,8 @@ function showSave2SDriveBtn(b) {
 let storeName;
 let storeNum;
 store2Drive.addEventListener('click', function () {
+    clearInterval(timing)
+    countDown = 20
     let nam = []
     let num = []
     eleSlowDisplay(viewContactContainer, 'flex', 600)
@@ -498,6 +501,8 @@ function contactShow(el) {
 
 
 viewContactContainer.addEventListener('click', function () {
+    clearInterval(timing)
+    countDown = 20
     let result = JSON.parse(localStorage.getItem('contact'))
     if (localStorage.getItem('contact') !== null && result.length > 0) {
         try {
